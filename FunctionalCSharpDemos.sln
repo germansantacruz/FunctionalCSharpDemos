@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D01Inmutabilidad", "D01Inmutabilidad\D01Inmutabilidad.csproj", "{19BABCB4-C41B-44E9-846F-469E63772075}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D01Inmutabilidad", "D01Inmutabilidad\D01Inmutabilidad.csproj", "{19BABCB4-C41B-44E9-846F-469E63772075}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D02Expresiones", "D02Expresiones\D02Expresiones.csproj", "{EFF32037-4CE7-4BC2-ABDD-16271CFC7682}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D02Expresiones", "D02Expresiones\D02Expresiones.csproj", "{EFF32037-4CE7-4BC2-ABDD-16271CFC7682}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D03Expresiones", "D03Expresiones\D03Expresiones.csproj", "{BC2E694E-D9E9-43F9-B418-8F3E7DF04218}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D03Expresiones", "D03Expresiones\D03Expresiones.csproj", "{BC2E694E-D9E9-43F9-B418-8F3E7DF04218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D04 LambdaExpressions", "D04 LambdaExpressions\D04 LambdaExpressions.csproj", "{3FC907AA-DD83-475D-94E0-B48DD0E8D6FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{BC2E694E-D9E9-43F9-B418-8F3E7DF04218}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC2E694E-D9E9-43F9-B418-8F3E7DF04218}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC2E694E-D9E9-43F9-B418-8F3E7DF04218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FC907AA-DD83-475D-94E0-B48DD0E8D6FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FC907AA-DD83-475D-94E0-B48DD0E8D6FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FC907AA-DD83-475D-94E0-B48DD0E8D6FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FC907AA-DD83-475D-94E0-B48DD0E8D6FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
