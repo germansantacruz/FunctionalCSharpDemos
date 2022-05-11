@@ -2,12 +2,12 @@
 
 public static class Ex02_Immutability
 {
-    public static int[] GetData()
+    private static int[] GetData()
     {
         return Enumerable.Range(1, 10).ToArray();
     }
 
-    public static int[] EvitarMutacionDeEstado(int[] data)
+    private static int[] FilterData(int[] data)
     {
         var isOdd = (int number) => number % 2 == 1;
 
@@ -17,8 +17,21 @@ public static class Ex02_Immutability
             .ToArray();
     }
 
-    public static string ToStringCustom(this int[] lista)
+    private static string ToStringCustom(this int[] lista)
     {
         return string.Join(", ", lista);
+    }
+
+    public static void RunExample(ConsoleColor color)
+    {
+        Console.ForegroundColor = color;
+        Console.WriteLine("\nEvitar mutación de estado:");
+        Console.WriteLine("-----------------------------------------------------\n");
+        Console.ForegroundColor = ConsoleColor.White;
+
+        var data = GetData();
+        Console.WriteLine($"Lista Original:          {data.ToStringCustom()}");
+        Console.WriteLine($"Lista Original filtrada: {FilterData(data).ToStringCustom()}");
+        Console.WriteLine($"Lista Original:          {data.ToStringCustom()}");
     }
 }

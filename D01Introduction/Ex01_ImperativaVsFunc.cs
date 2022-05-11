@@ -2,7 +2,14 @@
 
 public static class Ex01_ImperativaVsFunc
 {
-    public static IEnumerable<Person> GetData()
+    private class Person
+    {
+        public string Name { get; init; }
+        public string Country { get; init; }
+        public bool IsMarried { get; init; }
+    }
+
+    private static IEnumerable<Person> GetData()
     {
         var people = new List<Person>()
         {
@@ -22,7 +29,7 @@ public static class Ex01_ImperativaVsFunc
 
     // Buscar las personas casadas, forma imperativa ¿Cómo?
     // Usando instrucciones de control de flujo
-    public static string GetMarriedPeople()
+    private static string GetMarriedPeople()
     {
         var data = GetData();
         var result = new List<string>();
@@ -38,7 +45,7 @@ public static class Ex01_ImperativaVsFunc
     }
 
     // Forma funcional ¿Qué quiero?
-    public static string GetMarriedPeople2()
+    private static string GetMarriedPeople2()
     {
         return GetData()
             .MyCustomWhere(i => i.IsMarried)
@@ -46,12 +53,12 @@ public static class Ex01_ImperativaVsFunc
             .ToStringPeopleList();
     }
 
-    public static string ToStringPeopleList(this IEnumerable<string> lista)
+    private static string ToStringPeopleList(this IEnumerable<string> lista)
     {
         return string.Join(", ", lista);
     }
 
-    public static IEnumerable<Person> MyCustomWhere(this IEnumerable<Person> lista,
+    private static IEnumerable<Person> MyCustomWhere(this IEnumerable<Person> lista,
         Func<Person, bool> predicate)
     {
         var result = new List<Person>();
@@ -64,10 +71,15 @@ public static class Ex01_ImperativaVsFunc
 
         return result;
     }
-}
-public class Person
-{
-    public string Name { get; set; }
-    public string Country { get; set; }
-    public bool IsMarried { get; set; }
+
+    public static void RunExample(ConsoleColor color)
+    {
+        Console.ForegroundColor = color;
+        Console.WriteLine("\nProgramación imperativa vs funcional:");
+        Console.WriteLine("-----------------------------------------------------\n");
+        Console.ForegroundColor = ConsoleColor.White;
+
+        Console.WriteLine(GetMarriedPeople());
+        Console.WriteLine(GetMarriedPeople2());
+    }
 }

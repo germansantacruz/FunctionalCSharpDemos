@@ -16,13 +16,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D05 MethodChaining", "D05 M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D02Immutability", "D02Immutability\D02Immutability.csproj", "{828AA86F-DAA8-403E-986B-A7A3FA92ADAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D01Immutability", "D01Immutability\D01Immutability.csproj", "{DABBFA7B-88A6-4D6C-B25A-11C28ED5B8B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D01Immutability", "D01Immutability\D01Immutability.csproj", "{DABBFA7B-88A6-4D6C-B25A-11C28ED5B8B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D02Expressions", "D02Expressions\D02Expressions.csproj", "{4B8AFB77-318B-491C-979D-9E83BF111E39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D02Expressions", "D02Expressions\D02Expressions.csproj", "{4B8AFB77-318B-491C-979D-9E83BF111E39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D03Expressions", "D03Expressions\D03Expressions.csproj", "{6B96481F-6E55-4CA8-8FD2-9D0C4AB37E18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D03Expressions", "D03Expressions\D03Expressions.csproj", "{6B96481F-6E55-4CA8-8FD2-9D0C4AB37E18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D01Introduction", "D01Introduction\D01Introduction.csproj", "{DF7CBA40-2050-4E1F-93CE-C5B3724E756E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D01Introduction", "D01Introduction\D01Introduction.csproj", "{DF7CBA40-2050-4E1F-93CE-C5B3724E756E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

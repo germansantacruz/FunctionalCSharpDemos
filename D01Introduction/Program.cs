@@ -1,25 +1,11 @@
 ﻿using D01Introduction;
-using D01Introduction.FPCSharp;
 
-Console.WriteLine("\nProgramación imperativa vs funcional:");
-Console.WriteLine("------------------------------------\n");
-Console.WriteLine(Ex01_ImperativaVsFunc.GetMarriedPeople());
-Console.WriteLine(Ex01_ImperativaVsFunc.GetMarriedPeople2());
+Console.Title = "Ejemplos de Programación Funcional en C#";
+PrintMenu();
+RunExamples();
 
-// Inmutabilidad
-Console.WriteLine("\nEvitar mutación de estado:");
-Console.WriteLine("------------------------------------\n");
-var data = Ex02_Immutability.GetData();
-Console.WriteLine(data.ToStringCustom());
-Console.WriteLine(Ex02_Immutability.EvitarMutacionDeEstado(data)
-    .ToStringCustom());
-Console.WriteLine(data.ToStringCustom());
 
-// Concurrencia
-Console.WriteLine("\nEvitar mutación de estado en procesos concurrentes:");
-Console.WriteLine("-----------------------------------------------------\n");
-Ex03_Concurrency.MutarEstadoOcasionaProblemas();
-Ex03_Concurrency.SinMutarEstado();
+/*
 
 // C Sharp Funcional
 Console.Write("******************************************************************\n");
@@ -48,5 +34,42 @@ Ex04_FunctionalCSharp.PruebaInitOnlySetters c4 = new() { Id = 10 };
 Console.WriteLine($"Valor de Id: {c4.Id}");
 */
 
-Console.ReadLine();
+static void PrintMenu()
+{
+    Console.WriteLine("****************************************************************");
+    Console.WriteLine("                              Menú");
+    Console.WriteLine("****************************************************************");
+    Console.WriteLine("1. Imperativa vs Funcional   2. Inmutabilidad    3. Concurrencia");
+    Console.WriteLine("Elija una opción.");
+}
 
+static void RunExamples()
+{
+    var color = ConsoleColor.DarkGreen;
+    var op = "_";
+    while (op != "exit")
+    {
+        Console.Write("\n===> ");
+        op = Console.ReadLine() ?? "";
+
+        switch (op)
+        {
+            case "1":
+                Ex01_ImperativaVsFunc.RunExample(color);
+                break;
+            case "2":
+                Ex02_Immutability.RunExample(color);
+                break;
+            case "3":
+                Ex03_Concurrency.RunExample(color);
+                break;
+            case "clear":
+                Console.Clear();
+                PrintMenu();
+                break;
+            default:
+                op = "exit";
+                break;
+        }
+    }
+}
