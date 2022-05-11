@@ -24,10 +24,7 @@ public static class Ex02_Immutability
 
     public static void RunExample(ConsoleColor color)
     {
-        Console.ForegroundColor = color;
-        Console.WriteLine("\nEvitar mutación de estado:");
-        Console.WriteLine("-----------------------------------------------------\n");
-        Console.ForegroundColor = ConsoleColor.White;
+        Util.ShowTitle("Evitar mutación de estado:", color);
 
         var data = GetData();
         Console.WriteLine($"Lista Original:          {data.ToStringCustom()}");

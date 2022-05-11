@@ -2,14 +2,16 @@
 
 public static class F04_Tuples
 {
+    // En algunas situaciones no es práctico definir tipos dedicados para pasar temporalmente
+    // datos de una función a otra, en estos casos es mejor usar tuplas.
     // Se está utilizando el operador rango ".."
-    public static (string, string) SplitAt1(this string s, int at)
+    private static (string, string) SplitAt1(this string s, int at)
         => (s[..at], s[at..]);
 
-    public static (string baseCcy, string quoteCcy) SplitAt2(this string s, int at)
+    private static (string baseCcy, string quoteCcy) SplitAt2(this string s, int at)
         => (s[..at], s[at..]);
 
-    public static (IEnumerable<int> list1, IEnumerable<int> list2) Partition(this IEnumerable<int> list,
+    private static (IEnumerable<int> list1, IEnumerable<int> list2) Partition(this IEnumerable<int> list,
         Func<int, bool> funcPartition)
     {
         var l1 = new List<int>();
@@ -27,9 +29,9 @@ public static class F04_Tuples
         return (l1, l2);
     }
 
-    public static void Example()
+    public static void RunExample(ConsoleColor color)
     {
-        Console.WriteLine("\nF04 ==> Ejemplo con Tuplas.");
+        Util.ShowTitle("Ejemplo con Tuplas:", color);
 
         var (s1, s2) = "EURUSD".SplitAt1(3);
         var pair = "EURUSD".SplitAt2(3);

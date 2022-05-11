@@ -2,7 +2,10 @@
 
 public static class F03_FunctionsWithinFunctions
 {
-    public static string MapToString(this int[] list, Func<int[], string> funcMapping)
+    // Al escribir muchas funciones simples, muchas se llamarán de una sola ubicación;
+    // C# permite hacer esto explícito al declarar funciones dentro del ámbito de otra función.
+
+    private static string MapToString(this int[] list, Func<int[], string> funcMapping)
         => funcMapping(list);
 
     private enum Operation
@@ -41,12 +44,13 @@ public static class F03_FunctionsWithinFunctions
             .MapToString(list => string.Join(" ", list));
     }
 
-    public static void Example()
+    public static void RunExample(ConsoleColor color)
     {
-        Console.WriteLine("\nF03 ==> Ejemplo Funciones dentro de Funciones.");
+        Util.ShowTitle("Ejemplo Funciones dentro de Funciones:", color);
         Console.WriteLine("Input: 1 - 20");
         Console.Write("Elija una opción, 1) Sumar veinte 2) Filtrar múltiplos de siete 3) Filtrar impares: ");
         var op = Console.ReadLine() ?? "10";
+
         Console.WriteLine(GetNumbers((Operation)(int.Parse(op) - 1)));
     }
 }

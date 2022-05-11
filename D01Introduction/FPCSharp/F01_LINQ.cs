@@ -16,9 +16,10 @@ public static class F01_LINQ
         return sb.ToString();
     }
 
-    public static void Example()
+    public static void RunExample(ConsoleColor color)
     {
-        Console.WriteLine("\nF01 ==> Ejemplo con LINQ: Filtrar de 1-100 los múltiplos de 20 y ordernar de forma descendente.");
+        Util.ShowTitle("Ejemplo con LINQ, Filtrar de 1-100 los múltiplos de\n20 y ordernar de forma descendente:", color);
+
         Console.WriteLine(ExampleWithLINQ(n => n % 20 == 0));
     }
 }

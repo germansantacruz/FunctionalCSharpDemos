@@ -1,18 +1,8 @@
-﻿using static System.Math;
+﻿namespace D01Introduction.FPCSharp;
 
-namespace D01Introduction;
-
-public static class Ex04_FunctionalCSharp
+public static class F05_InitOnlySetters
 {
-    public record Circle(double radius)
-    {
-        public double Circumference => PI * 2 * radius;
-    }
-
-    // *****************************************
-    // Init only setters
-    // *****************************************
-    public class PruebaInitOnlySetters
+    private class PruebaInitOnlySetters
     {
         // Propiedad de sólo lectura
         // Se puede asignar un valor en la inicialización al instanciar con new {}
@@ -26,5 +16,12 @@ public static class Ex04_FunctionalCSharp
         {
             Id = id;
         }
+    }
+
+    public static void RunExample(ConsoleColor color)
+    {
+        Util.ShowTitle("Ejemplo con Tuplas:", color);
+
+
     }
 }

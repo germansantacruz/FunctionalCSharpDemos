@@ -36,10 +36,7 @@ public static class Ex03_Concurrency
 
     public static void RunExample(ConsoleColor color)
     {
-        Console.ForegroundColor = color;
-        Console.WriteLine("\nEvitar mutación de estado en procesos concurrentes:");
-        Console.WriteLine("-----------------------------------------------------\n");
-        Console.ForegroundColor = ConsoleColor.White;
+        Util.ShowTitle("Evitar mutación de estado en procesos concurrentes:", color);
 
         MutarEstado();
         SinMutarEstado();

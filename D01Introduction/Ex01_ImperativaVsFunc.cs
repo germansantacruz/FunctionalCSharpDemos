@@ -4,8 +4,8 @@ public static class Ex01_ImperativaVsFunc
 {
     private class Person
     {
-        public string Name { get; init; }
-        public string Country { get; init; }
+        public string Name { get; init; } = "";
+        public string Country { get; init; } = "";
         public bool IsMarried { get; init; }
     }
 
@@ -74,10 +74,7 @@ public static class Ex01_ImperativaVsFunc
 
     public static void RunExample(ConsoleColor color)
     {
-        Console.ForegroundColor = color;
-        Console.WriteLine("\nProgramación imperativa vs funcional:");
-        Console.WriteLine("-----------------------------------------------------\n");
-        Console.ForegroundColor = ConsoleColor.White;
+        Util.ShowTitle("Programación imperativa vs funcional:", color);
 
         Console.WriteLine(GetMarriedPeople());
         Console.WriteLine(GetMarriedPeople2());

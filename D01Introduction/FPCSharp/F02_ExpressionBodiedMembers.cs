@@ -2,7 +2,7 @@
 
 public static class F02_ExpressionBodiedMembers
 {
-    // Funciones más concisas con expression-bodied members 
+    // Funciones y propiedades más concisas con expression-bodied members 
     private class Person
     {
         public Person(string firstName, string lastName)
@@ -20,9 +20,10 @@ public static class F02_ExpressionBodiedMembers
                                      .ToUpper();
 
     }
-    public static void Example()
+    public static void RunExample(ConsoleColor color)
     {
-        Console.WriteLine("\nF02 ==> Ejemplo con Expression-bodied Members.");
+        Util.ShowTitle("Ejemplo con Expression-bodied Members:", color);
+
         //Person p = new("", "") { FirstName = "" };
         Person p = new("Tomasa", "Tellez");
         Console.WriteLine(p.FullNameProp);
