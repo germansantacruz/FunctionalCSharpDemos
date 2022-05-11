@@ -1,4 +1,4 @@
-﻿namespace D02Expresiones;
+﻿namespace D02Expressions;
 
 internal class MySingleton
 {

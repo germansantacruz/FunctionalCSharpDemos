@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using D01Inmutabilidad;
+using D01Immutability;
 
 Console.WriteLine("Inmutabilidad");
 Console.WriteLine("*************************");

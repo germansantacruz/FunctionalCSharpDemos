@@ -1,4 +1,4 @@
-﻿namespace D01Inmutabilidad;
+﻿namespace D01Immutability;
 
 internal class DateRange
 {

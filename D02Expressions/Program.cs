@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using D02Expresiones;
+using D02Expressions;
 
 Console.WriteLine("Hello, World!");
 
