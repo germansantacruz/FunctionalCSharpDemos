@@ -18,7 +18,7 @@ public static class Util
         Console.WriteLine("****************************************************************");
         Console.WriteLine("1. Imperativa vs Funcional     2. Inmutabilidad    3. Concurrencia");
         Console.WriteLine("4. Expression Bodied Members   5. LINQ             6. Funciones locales");
-        Console.WriteLine("7. Tuplas");
+        Console.WriteLine("7. Init only setters           8. Tuplas           9. Pattern Matching");
         Console.WriteLine("Elija una opción.");
     }
 
@@ -52,7 +52,13 @@ public static class Util
                     F03_FunctionsWithinFunctions.RunExample(color);
                     break;
                 case "7":
+                    F05_InitOnlySetters.RunExample(color);
+                    break;
+                case "8":
                     F04_Tuples.RunExample(color);
+                    break;
+                case "9":
+                    F06_PatternMatching.RunExample(color);
                     break;
                 case "clear":
                     Console.Clear();

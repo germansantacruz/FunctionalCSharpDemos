@@ -20,8 +20,14 @@ public static class F05_InitOnlySetters
 
     public static void RunExample(ConsoleColor color)
     {
-        Util.ShowTitle("Ejemplo con Tuplas:", color);
+        Util.ShowTitle("Ejemplo de Init only setters:", color);
 
-
+        PruebaInitOnlySetters c2 = new();
+        Console.WriteLine($"Valor de Id: {c2.Id}");
+        //c2.Id = 10;
+        PruebaInitOnlySetters c3 = new(3);
+        Console.WriteLine($"Valor de Id: {c3.Id}");
+        PruebaInitOnlySetters c4 = new() { Id = 10 };
+        Console.WriteLine($"Valor de Id: {c4.Id}");
     }
 }
