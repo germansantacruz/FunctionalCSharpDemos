@@ -89,6 +89,7 @@ public static class F06_PatternMatching
     private class Circle : Shape { public int Radius { get; set; } }
     private class Square : Shape { public int Width { get; set; } }
 
+    // Switch expression
     private static void Example2()
     {
         Person person = new()
@@ -114,7 +115,7 @@ public static class F06_PatternMatching
         string details2 = shape switch
         {
             Circle cir => $"This is a circle with radius: {cir.Radius}.",
-            Square { Width: 15 } => $"Square with width: 15.",
+            Square { Width: 15, Area: 150 } => $"Square with width: 15 and Area: 150.",
             { Area: 101 } sh => $"The area is {sh.Area}.",
             { Area: var area } => $"Area: {area}",
             _ => "Default"
