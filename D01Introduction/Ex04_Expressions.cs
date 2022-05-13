@@ -30,8 +30,7 @@ public static class Ex04_Expressions
 
         private MySingleton() { }
 
-        public static MySingleton Instance
-            => instance ??= new MySingleton();
+        public static MySingleton Instance => instance ??= new MySingleton();
 
         public override string ToString()
             => $"Type name: {GetType().Name.Split('+')[0]}";
