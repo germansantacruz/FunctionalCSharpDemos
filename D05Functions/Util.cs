@@ -15,7 +15,7 @@ public static class Util
         Console.WriteLine("****************************************************************");
         Console.WriteLine("                              Menú");
         Console.WriteLine("****************************************************************");
-        Console.WriteLine("1. Higher-order function     2. Inmutabilidad      3. Concurrencia");
+        Console.WriteLine("1. Higher-order function     2. Funciones puras   3. ");
         Console.WriteLine("Elija una opción.");
     }
 
@@ -32,6 +32,9 @@ public static class Util
             {
                 case "1":
                     HOFs.RunExample(color);
+                    break;
+                case "2":
+                    PureFunctions.RunExample(color);
                     break;
                 case "clear":
                     Console.Clear();

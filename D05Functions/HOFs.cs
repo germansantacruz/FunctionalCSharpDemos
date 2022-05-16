@@ -36,8 +36,22 @@ public static class HOFs
 
     // Adapter functions
     // Algo similar al patrón adapter en POO
-    public static Func<T2, T1, R> SwapArgs<T1, T2, R>(this Func<T1, T2, R> func)
+    private static Func<T2, T1, R> SwapArgs<T1, T2, R>(this Func<T1, T2, R> func)
         => (t2, t1) => func(t1, t2);
+
+    // Negar un predicado
+    private static Func<T, bool> Negate<T>(this Func<T, bool> predicate)
+        => t => !predicate(t);
+
+    // Using
+    private static async Task<TResult> UsingAsync<TDisposable, TResult>(
+        Func<TDisposable> factory,
+        Func<TDisposable, Task<TResult>> map)
+        where TDisposable : IDisposable
+    {
+        using var disposable = factory();
+        return await map(disposable);
+    }
 
     private static void Example2()
     {
@@ -46,6 +60,13 @@ public static class HOFs
 
         Console.WriteLine($"10 / 2 =  {divide(10, 2)}");
         Console.WriteLine($"10 / 2 =  {divideBy(2, 10)}");
+
+        var pares = (int number) => number % 2 == 0;
+        var data = Enumerable.Range(1, 10)
+            .Where(pares.Negate())
+            .ToArray();
+
+        Console.WriteLine($"Números impares del 1 al 10: {string.Join(" ", data)}");
     }
 
     // Avoid duplication (setup and dispose)
@@ -97,11 +118,12 @@ public static class HOFs
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
             await connection.OpenAsync();
-            using (SqlCommand command = connection.CreateCommand())
-            {
-                command.Connection = connection;
-                return await func(command);
-            }
+            return await UsingAsync(() => connection.CreateCommand(),
+                async cmd =>
+                {
+                    cmd.Connection = connection;
+                    return await func(cmd);
+                });
         }
     }
 
