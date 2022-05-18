@@ -8,8 +8,26 @@ public class BicFormatValidator : IValidator<MakeTransfer>
     public bool IsValid(MakeTransfer transfer)
     => regex.IsMatch(transfer.Bic);
 }
-public class DateNotPastValidator : IValidator<MakeTransfer>
+public class DateNotPastValidatorOld : IValidator<MakeTransfer>
 {
     public bool IsValid(MakeTransfer transfer)
     => (DateTime.UtcNow.Date <= transfer.Date.Date);
+}
+
+public class DateNotPastValidatorOld2 : IValidator<MakeTransfer>
+{
+    private readonly IDateTimeService dateService;
+
+    public DateNotPastValidatorOld2(IDateTimeService dateService)
+    {
+        this.dateService = dateService;
+    }
+    public bool IsValid(MakeTransfer transfer)
+    => dateService.UtcNow.Date <= transfer.Date.Date;
+}
+
+public record DateNotPastValidator(DateTime Today) : IValidator<MakeTransfer>
+{
+    public bool IsValid(MakeTransfer transfer)
+    => Today <= transfer.Date.Date;
 }

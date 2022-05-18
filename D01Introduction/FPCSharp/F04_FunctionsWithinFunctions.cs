@@ -1,9 +1,13 @@
 ﻿namespace D01Introduction.FPCSharp;
 
-public static class F03_FunctionsWithinFunctions
+public static class F04_FunctionsWithinFunctions
 {
+    // *******************************************************************************    
+    // Funciones dentro de funciones:
     // Al escribir muchas funciones simples, muchas se llamarán de una sola ubicación;
-    // C# permite hacer esto explícito al declarar funciones dentro del ámbito de otra función.
+    // C# permite hacer esto explícito al declarar funciones dentro del ámbito de otra
+    // función.
+    // *******************************************************************************
 
     private static string MapToString(this int[] list, Func<int[], string> funcMapping)
         => funcMapping(list);
@@ -20,10 +24,11 @@ public static class F03_FunctionsWithinFunctions
 
         Func<int, int> add20 = number => number + 20;
         var filterMultiple7 = (int number) => (number % 7) == 0;
-        // Función local
-        // Se puede declarar como estática para mejorar el rendimiento y no accede 
-        // a variables del mismo ámbito adjunto.
+        // Función local, se puede declarar como estática para mejorar el rendimiento,
+        // si no accede a variables del mismo ámbito adjunto.
         static bool FilterOdd(int number) => (number % 2) != 0;
+        //int mult = 2;
+        //static bool FilterOdd2(int number) => (number * mult % 2) != 0;
 
         switch (op)
         {

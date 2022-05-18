@@ -1,10 +1,13 @@
 ﻿namespace D01Introduction.FPCSharp;
 
-public static class F04_Tuples
+public static class F05_Tuples
 {
-    // En algunas situaciones no es práctico definir tipos dedicados para pasar temporalmente
-    // datos de una función a otra, en estos casos es mejor usar tuplas.
-    // Se está utilizando el operador rango ".."
+    // *******************************************************************************    
+    // En algunas situaciones no es práctico definir tipos dedicados para pasar
+    // temporalmente datos de una función a otra, en estos casos es mejor usar tuplas.
+    // En este ejmplo se está utilizando también el operador rango ".."
+    // *******************************************************************************
+
     private static (string, string) SplitAt1(this string s, int at)
         => (s[..at], s[at..]);
 

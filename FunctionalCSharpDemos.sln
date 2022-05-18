@@ -18,7 +18,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D01Immutability", "D01Immut
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D01Introduction", "D01Introduction\D01Introduction.csproj", "{DF7CBA40-2050-4E1F-93CE-C5B3724E756E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D05Functions", "D05Functions\D05Functions.csproj", "{069E8CCC-1C0A-4E2D-85FD-49CA9DAFD433}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D05Functions", "D05Functions\D05Functions.csproj", "{069E8CCC-1C0A-4E2D-85FD-49CA9DAFD433}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

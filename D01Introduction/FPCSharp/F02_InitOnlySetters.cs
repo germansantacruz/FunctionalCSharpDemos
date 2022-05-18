@@ -1,12 +1,16 @@
 ﻿namespace D01Introduction.FPCSharp;
 
-public static class F05_InitOnlySetters
+public static class F02_InitOnlySetters
 {
     private class PruebaInitOnlySetters
     {
-        // Propiedad de sólo lectura
-        // Se puede asignar un valor en la inicialización al instanciar con new {}
-        // También se puede asignar un valor en el constructor
+        // *******************************************************************************    
+        // Init Only Setters:
+        // - Propiedades de sólo lectura
+        // - Se puede asignar un valor en la inicialización al instanciar con new {}
+        // - También se puede asignar un valor en el constructor
+        // *******************************************************************************
+
         public int Id { get; init; } = 1;
 
         public PruebaInitOnlySetters()

@@ -27,6 +27,7 @@ public static class Util
     {
         var color = ConsoleColor.DarkGreen;
         var op = "_";
+
         while (op != "exit")
         {
             Console.Write("\n===> ");
@@ -47,19 +48,19 @@ public static class Util
                     Ex04_Expressions.RunExample(color);
                     break;
                 case "5":
-                    F05_InitOnlySetters.RunExample(color);
+                    F02_InitOnlySetters.RunExample(color);
                     break;
                 case "6":
                     F01_LINQ.RunExample(color);
                     break;
                 case "7":
-                    F02_ExpressionBodiedMembers.RunExample(color);
+                    F03_ExpressionBodiedMembers.RunExample(color);
                     break;
                 case "8":
-                    F03_FunctionsWithinFunctions.RunExample(color);
+                    F04_FunctionsWithinFunctions.RunExample(color);
                     break;
                 case "9":
-                    F04_Tuples.RunExample(color);
+                    F05_Tuples.RunExample(color);
                     break;
                 case "10":
                     F06_PatternMatching.RunExample(color);

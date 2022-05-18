@@ -2,6 +2,16 @@
 
 public static class F06_PatternMatching
 {
+    // *******************************************************************************    
+    // 	Pattern matching:
+    // 	Es una técnica en la que se prueba una expresión para determinar si tiene
+    // 	ciertas características.
+    // 	    - La expresión "is" soporta pattern matching para probar una expresión y
+    // 	    declarar condicionalmente una nueva variable al resultado de esa expresión.
+    // 	    - La expresión "switch" permite realizar acciones basadas en la primera
+    // 	    coincidencia que cumpla con el patrón.
+    // *******************************************************************************
+
     private class Address
     {
         public string City { get; set; } = "";
@@ -21,7 +31,12 @@ public static class F06_PatternMatching
         Person person = new()
         {
             Name = "David",
-            Address = new Address() { City = "Santa Cruz", Country = "Bolivia", PostalCode = 50 }
+            Address = new Address()
+            {
+                City = "Santa Cruz",
+                Country = "Bolivia",
+                PostalCode = 50
+            }
         };
 
         // Type Pattern
@@ -95,7 +110,12 @@ public static class F06_PatternMatching
         Person person = new()
         {
             Name = "David",
-            Address = new Address() { City = "Santa Cruz", Country = "Bolivia", PostalCode = 50 }
+            Address = new Address()
+            {
+                City = "Santa Cruz",
+                Country = "Bolivia",
+                PostalCode = 50
+            }
         };
 
         Shape shape1 = new Circle { Area = 100, Radius = 5 };
@@ -106,7 +126,7 @@ public static class F06_PatternMatching
             10 or 11 => "10-11",
             >= 0 and <= 9 => "0-9",
             >= 12 and <= 40 => "12-40",
-            >= 41 => "51-",
+            >= 41 => "41-",
             _ => "default case"
         };
         Console.WriteLine(details1);
@@ -141,6 +161,7 @@ public static class F06_PatternMatching
             _ => throw new ArgumentException($"No existe el Impuesto para {country}.")
         };
 
+    // Expresión switch con tupla
     private static decimal GetDiscount(int groupSize, DateTime visitDate)
         => (groupSize, visitDate.DayOfWeek) switch
         {
@@ -156,7 +177,7 @@ public static class F06_PatternMatching
         Util.ShowTitle("Ejemplos de Pattern Matching:", color);
 
         Example1();
-        Console.WriteLine($"El caracter es una letra? {IsLetter('5')}");
+        Console.WriteLine($"El caracter '5' es una letra? {IsLetter('5')}");
         Example2();
         Console.WriteLine($"El impuesto para Bolivia es: {RateByCountry("bo")}");
         Console.WriteLine($"Su descuento del día es: {GetDiscount(1, DateTime.Now)}");

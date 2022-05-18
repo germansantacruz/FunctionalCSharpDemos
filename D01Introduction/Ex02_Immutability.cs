@@ -2,6 +2,11 @@
 
 public static class Ex02_Immutability
 {
+    // *******************************************************************************
+    // Evitar mutación de estado: 
+    // Para filtrar y ordenar una lista, no se modifica la original se crea una nueva.
+    // *******************************************************************************
+
     private static int[] GetData()
     {
         return Enumerable.Range(1, 10).ToArray();

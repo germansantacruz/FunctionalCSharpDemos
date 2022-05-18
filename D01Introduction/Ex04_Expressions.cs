@@ -2,9 +2,14 @@
 
 public static class Ex04_Expressions
 {
+    // *******************************************************************************    
+    // Para codificar en un estilo más funcional, preferir expresiones sobre
+    // declaraciones.
+    // *******************************************************************************
+
     private class MyClassicSingleton
     {
-        private static MyClassicSingleton instance;
+        private static MyClassicSingleton? instance;
 
         private MyClassicSingleton() { }
 
@@ -26,7 +31,7 @@ public static class Ex04_Expressions
     // Las expresiones se ejecutan por su resultado.
     private class MySingleton
     {
-        private static MySingleton instance;
+        private static MySingleton? instance;
 
         private MySingleton() { }
 

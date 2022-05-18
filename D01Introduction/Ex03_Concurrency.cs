@@ -2,6 +2,11 @@
 
 public static class Ex03_Concurrency
 {
+    // *******************************************************************************    
+    // Si existe mutación de estado, no se puede garantizar el resultado en procesos
+    // concurrentes.
+    // *******************************************************************************
+
     private static void MutarEstado()
     {
         // Problemas en procesos concurrentes

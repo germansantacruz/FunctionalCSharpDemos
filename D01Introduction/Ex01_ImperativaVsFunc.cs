@@ -2,6 +2,10 @@
 
 public static class Ex01_ImperativaVsFunc
 {
+    // ***********************************************************************
+    // Comparando estilo funcional vs Imperativa
+    // ***********************************************************************
+
     private class Person
     {
         public string Name { get; init; } = "";

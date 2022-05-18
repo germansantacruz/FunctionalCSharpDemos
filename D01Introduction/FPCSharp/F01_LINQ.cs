@@ -3,6 +3,12 @@ namespace D01Introduction.FPCSharp;
 
 public static class F01_LINQ
 {
+    // *******************************************************************************    
+    // Ejemplo con LINQ:
+    // Filtrar los múltiplos de 20 de números del 1-100 y ordernarlos en forma
+    // descendente.
+    // *******************************************************************************
+
     private static string ExampleWithLINQ(Func<int, bool> predicate)
     {
         StringBuilder sb = new();

@@ -1,8 +1,11 @@
 ﻿namespace D01Introduction.FPCSharp;
 
-public static class F02_ExpressionBodiedMembers
+public static class F03_ExpressionBodiedMembers
 {
-    // Funciones y propiedades más concisas con expression-bodied members 
+    // *******************************************************************************    
+    // Funciones y propiedades más concisas con expression-bodied members
+    // *******************************************************************************
+
     private class Person
     {
         public Person(string firstName, string lastName)
